@@ -80,7 +80,7 @@
 .header .head .menu ul li a:after {
     display: block;
     position: absolute;
-    top:25px;
+    top: 25px;
     left: 0;
     width: 0;
     height: 2px;
@@ -113,4 +113,45 @@
     line-height: 35px;
     text-align: center;
     margin: 0 auto;
+}
+
+/* ----------------------------------about-us-------------------------------------------- */
+
+.about-us .wrapper {
+    padding-top: 92px;
+    padding-bottom: 109px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us .title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 22px;
+    color: #464646;
+}
+
+.about-us .content .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #808080;
+    max-width: 890px;
+}
+.about-us .content .text:first-child{
+    margin-bottom: 33px;
+}
+.about-us .content .text:last-child{
+    position: relative;
+    padding-left: 35px;
+}
+.about-us .content .text:last-child::before{
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 100%;
+    background-color: #6D4CE1;
+    top:0;
+    left:0;
 }
