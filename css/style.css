@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 * {
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway';
     font-size: 16px;
     font-weight: 400;
     color: #FFFFFF;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .wrapper {
@@ -58,7 +63,7 @@
 }
 
 .header .head .logo {
-    margin-right: 70px;
+    margin-right: 66px;
 }
 
 .header .head .menu {
@@ -71,6 +76,8 @@
 }
 
 .header .head .menu ul li a {
+    font-size: 14px;
+    text-transform: uppercase;
     position: relative;
     cursor: pointer;
     line-height: 1;
@@ -116,6 +123,9 @@
 }
 
 /* ----------------------------------about-us-------------------------------------------- */
+.about-us {
+    background-color: #F6F6F6;
+}
 
 .about-us .wrapper {
     padding-top: 92px;
@@ -139,19 +149,182 @@
     color: #808080;
     max-width: 890px;
 }
-.about-us .content .text:first-child{
+
+.about-us .content .text:first-child {
     margin-bottom: 33px;
 }
-.about-us .content .text:last-child{
+
+.about-us .content .text:last-child {
     position: relative;
     padding-left: 35px;
 }
-.about-us .content .text:last-child::before{
+
+.about-us .content .text:last-child::before {
     position: absolute;
     content: "";
     width: 3px;
     height: 100%;
     background-color: #6D4CE1;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
+}
+
+/* ------------------------skills-developing------------------------------------ */
+.skills-developing .wrapper {
+    padding-top: 104px;
+    padding-bottom: 87px;
+    padding-right: 60px;
+}
+
+.skills-developing .title {
+    margin: 0 auto 80px;
+    max-width: 452px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 22px;
+    color: #464646;
+}
+
+.skills-developing .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-developing .container .column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+    max-width: 410px;
+}
+
+.skills-developing .container .column-left {
+    text-align: right;
+}
+
+.skills-developing .container .column-right {
+    text-align: left;
+}
+
+.skills-developing .container .column-name {
+    padding-top: 44px;
+    color: #6D4CE1;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 80px;
+    max-width: 210px;
+    text-align: center;
+}
+
+.skills-developing .container .column .item {
+    display: flex;
+    column-gap: 20px;
+}
+
+.skills-developing .container .column .item .image {
+    min-width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #F6F6F6;
+}
+
+
+
+.skills-developing .container .column .item .content .item-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 23px;
+    color: #464646;
+}
+
+.skills-developing .container .column .item .content .text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #808080;
+}
+
+/* -----------------------------------------about-trainer------------------------------------------- */
+.about-trainer {
+    background-color: #6D4CE1;
+}
+
+.about-trainer .wrapper {
+    padding: 88px 68px 88px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-trainer .quotes-container {
+    padding-top:43px;
+    max-width: 520px;
+}
+
+.about-trainer .quotes-container .item {
+    position: relative;
+    padding-left: 53px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.about-trainer .quotes-container .item::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 3px;
+    background-color: #FFFFFF;
+    top: 0;
+    left: 0;
+}
+
+.about-trainer .quotes-container .item::after {
+    position: absolute;
+    content: "";
+    background-image: url("../assets/brackets.png");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    top: -4px;
+    left: 24px;
+}
+
+.about-trainer .quotes-container .item:first-child {
+    margin-bottom: 60px;
+}
+
+.about-trainer .quotes-container .item:last-child {
+    margin-top: 50px;
+}
+
+.about-trainer .information {
+    padding-top:60px;
+    padding-bottom:36px;
+    padding-left:74px;
+    padding-right: 83px;
+    width: 405px;
+    background-color: rgba(32, 34, 43, 0.35);
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.about-trainer .information .trainer-name {
+    max-width: 230px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 49px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.about-trainer .information .text {
+    max-width: 230px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
 }
