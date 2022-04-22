@@ -1,28 +1,26 @@
-const playButonPath = ".videos .video .play";
-const videoBloсkPatch = ".videos .video";
+const videoCardPath = "video";
+const playButonPath = `.videos .${videoCardPath} .play`;
+const videoBloсkPatch = `.videos .${videoCardPath}`;
+const videoWrapperPath = ".videos .wrapper";
 const playButtons = document.querySelectorAll(playButonPath);
 const videoBloсks = document.querySelectorAll(videoBloсkPatch);
-
-
+const videoWrapper = document.querySelector(videoWrapperPath);
 
 videoBloсks.forEach((videoBloсk) => {
-    videoBloсk.addEventListener("mouseover", () => {
+    videoBloсk.addEventListener("mouseover", (_) => {
         videoBloсk.querySelector(playButonPath).classList.add("red");
     })
-    videoBloсk.addEventListener("mouseout",()=>{
+    videoBloсk.addEventListener("mouseout",(_)=>{
         videoBloсk.querySelector(playButonPath).classList.remove("red");
     })
-    videoBloсk.addEventListener("click", (_) => {
-        setTimeout(function () {
-            window.location.href = 'https://www.youtube.com/watch?v=mOOrcf56OO8';
-        }, 100);
-    })
 })
-playButtons.forEach((playButton) => {
-    playButton.addEventListener("click", (event) => {
-        event.preventDefault();
-        setTimeout(function () {
+
+// всплытие (навешиваем event listener на parent node)
+videoWrapper.addEventListener("click", (event) => {
+    for (let parent of event.path) {
+        if (parent.className === videoCardPath) {
             window.location.href = 'https://www.youtube.com/watch?v=mOOrcf56OO8';
-        }, 100);
-    })
-})
+            break;
+        }
+    }
+});
