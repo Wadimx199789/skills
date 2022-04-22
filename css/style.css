@@ -41,6 +41,21 @@ body {
     border: 3px solid #C8B8FF;
 
 }
+ .button {
+    background: #472DA2;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+ .button:hover {
+    transform: scale(1.1);
+}
 
 .header {
     background-blend-mode: multiply;
@@ -345,6 +360,13 @@ body {
     max-width: 250px;
     margin: 0 auto 38px;
 }
+.course-program .join{
+    display: flex; 
+    justify-content: center;
+}
+.course-program .join .button{
+    padding: 18px 43px;
+}
 
 .course-program .course-duration {
     margin: 0 auto;
@@ -439,23 +461,6 @@ body {
     justify-content: center;
 }
 
-.course-program .recording button {
-    background: #472DA2;
-    border: none;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
-    color: #FFFFFF;
-    padding: 18px 43px;
-    transition: all 0.3s ease-in-out;
-}
-
-.course-program .recording button:hover {
-    transform: scale(1.1);
-}
-
 /*---------------------------videos-----------------------  */
 .videos {
     background-blend-mode: multiply;
@@ -545,28 +550,97 @@ body {
     color: #C8B8FF;
     padding-left: 40px;
 }
-.cost .about-diskounts::before{
-    z-index:2;
+
+.cost .about-diskounts::before {
+    z-index: 2;
     display: block;
     position: absolute;
-    content:"";
+    content: "";
     width: 32px;
     height: 32px;
-    left:0;
-    top:-10px;
+    left: 0;
+    top: -10px;
     background-image: url(../assets/percent.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
-.cost .about-diskounts::after{
+
+.cost .about-diskounts::after {
     z-index: 1;
     display: block;
     position: absolute;
-    content:"";
+    content: "";
     width: 32px;
     height: 32px;
-    left:0;
-    top:-10px;
+    left: 0;
+    top: -10px;
     background-color: #472DA2;
     border-radius: 50%;
+}
+
+/* -------------------recording------------------------------------------ */
+.recording {
+    text-align: center;
+    background-blend-mode: multiply;
+    background-image: url(../assets/recording-background.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(221, 220, 226, 0.78);
+}
+
+.recording .wrapper {
+    padding-top: 110px;
+    padding-bottom: 132px;
+}
+
+.recording .title {
+    max-width: 575px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 55px;
+    text-align: center;
+    color: #464646;
+    margin: 0 auto 33px;
+
+}
+
+.recording .text {
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #808080;
+    max-width: 900px;
+    margin-bottom: 44px;
+}
+.recording .record-form .send{
+    display: flex;
+    justify-content: center;
+}
+
+.recording .record-form .container {
+    margin: 0 auto;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    margin-bottom: 66px;
+}
+
+.recording .record-form .container input {
+    padding: 15px 0px 15px 27px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #808080;
+    border: 2px solid inherit;
+}
+
+.recording .record-form .container input:focus {
+    border: 2px solid #6D4CE1;
+}
+.recording .record-form .button{
+    padding:18px 112px;
 }
