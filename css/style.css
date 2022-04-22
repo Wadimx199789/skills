@@ -34,7 +34,7 @@ body {
     height: 30px;
     border: 1px solid #ccc;
     border-radius: 50%;
-    transition: all 0.5s ease-in-out;
+    transition: border 0.3s ease-in-out;
 }
 
 .contacts a:hover {
@@ -259,7 +259,7 @@ body {
 }
 
 .about-trainer .quotes-container {
-    padding-top:43px;
+    padding-top: 43px;
     max-width: 520px;
 }
 
@@ -301,9 +301,9 @@ body {
 }
 
 .about-trainer .information {
-    padding-top:60px;
-    padding-bottom:36px;
-    padding-left:74px;
+    padding-top: 60px;
+    padding-bottom: 36px;
+    padding-left: 74px;
     padding-right: 83px;
     width: 405px;
     background-color: rgba(32, 34, 43, 0.35);
@@ -327,4 +327,175 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
+}
+
+/* -------------------------------course-program------------------------------------------- */
+.course-program .wrapper {
+    padding-top: 119px;
+    padding-bottom: 132px;
+
+}
+
+.course-program .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+    color: #464646;
+    max-width: 250px;
+    margin: 0 auto 38px;
+}
+
+.course-program .course-duration {
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #6D4CE1;
+    max-width: 350px;
+    margin-bottom: 60px;
+}
+
+.course-program .course-duration .top {
+    padding-top: 28px;
+    padding-bottom: 33px;
+}
+
+.course-program .course-duration .top span {
+    display: block;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 23px;
+    color: #6D4CE1;
+}
+
+.course-program .course-duration .top .hours-count {
+    font-weight: 600;
+    font-size: 53px;
+    line-height: 55px;
+    color: #6D4CE1;
+}
+
+.course-program .course-duration .bottom {
+    padding: 15px 48px 27px;
+    background-color: #6D4CE1;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: #C8B8FF;
+}
+
+.course-program .purposes-box {
+    padding-top: 61px;
+    padding-bottom: 86px;
+    border: 2px solid #6D4CE1;
+    margin: 0 auto 74px;
+    text-align: center;
+    max-width: 920px;
+}
+
+.course-program .purposes-box .title {
+    max-width: 471px;
+}
+
+.course-program .purposes-box .purposes {
+    margin: 0 auto;
+    max-width: 710px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 33px;
+}
+
+.course-program .purposes-box .purposes .purpose {
+    position: relative;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 23px;
+    color: #464646;
+
+}
+
+.course-program .purposes-box .purposes .purpose::before,
+.course-program .purposes-box .purposes .purpose::after {
+    position: absolute;
+    content: "";
+    width: 41px;
+    top: -50%;
+    height: 41px;
+    border: 1px solid #6D4CE1;
+    border-radius: 50%;
+    background: url("../assets/checked.svg") no-repeat center;
+}
+
+.course-program .purposes-box .purposes .purpose::before {
+
+    left: 0;
+}
+
+.course-program .purposes-box .purposes .purpose::after {
+    right: 0;
+}
+.course-program .recording{
+    display: flex;
+    justify-content: center;
+}
+.course-program .recording button{
+    background: #472DA2;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    padding:18px 43px;
+    transition: all 0.3s ease-in-out;
+}
+.course-program .recording button:hover{
+    transform: scale(1.1);
+}
+
+/*---------------------------videos-----------------------  */
+.videos{
+    background-blend-mode: multiply;
+    background-image: url(../assets/videos-background.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(71, 45, 162, 1);
+}
+.videos .wrapper{
+    padding-top:133px;
+    padding-bottom: 110px;
+    display: flex;
+    justify-content: center;
+    column-gap: 80px;
+    row-gap: 60px;
+    flex-wrap: wrap;
+}
+.videos .video{
+    position: relative;
+    cursor:pointer
+}
+
+.videos .video img{
+    width: 100%;
+    height: auto;
+}
+.videos .video .play{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 94px;
+    height: 63px;
+    background-color:rgb(0%, 0%, 0%, 0.36);
+    border-radius: 25px;
+    border: none;
+    transition: all .3s ease-in-out;
+    
+}
+.videos .video .red{
+    background-color: rgba(223, 34, 34, 1);
+}
+.videos .video .play:hover{
+    background-color: rgba(223, 34, 34, 1);
 }
