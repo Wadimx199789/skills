@@ -50,6 +50,12 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width:769px) {
+    .button {
+        font-size: 14px;
+    }
+}
+
 .button:hover {
     transform: scale(1.1);
 }
@@ -125,17 +131,96 @@ body {
     bottom: 0;
 }
 
+/* ------------------------animation for burger button----------------------------------------------- */
 .header .head .burger.active::before {
-    transform: rotate(45deg);
-    top: 50%;
+    animation-name: move-before-down;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-before-down {
+
+    35% {
+        top: 50%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+}
+
+.header .head .burger.close::before {
+    animation-name: move-before-up;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-before-up {
+    0% {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    35% {
+        top: 50%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 0;
+        transform: rotate(0deg);
+    }
 }
 
 .header .head .burger.active::after {
-    transform: translateX(50%);
-    top: 50%;
-    transform: rotate(-45deg);
+    animation-name: move-after-up;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
+@keyframes move-after-up {
+
+    35% {
+        top: 50%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+}
+
+.header .head .burger.close::after {
+    animation-name: move-after-down;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-after-down {
+    0% {
+        bottom: 50%;
+        transform: rotate(-45deg);
+    }
+
+    35% {
+        bottom: 50%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        bottom: 0;
+        transform: rotate(0deg);
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
 .header .head .burger.active span {
     display: none;
 
@@ -147,6 +232,8 @@ body {
     column-gap: 25px;
 }
 
+/* ------------------------------animation for menu and background--------------------------------------- */
+
 .header .head .menu.active {
     display: block;
     z-index: 30;
@@ -155,9 +242,20 @@ body {
     width: 320px;
     height: 100%;
     top: 0;
-    right: 0;
+    right: -200%;
     padding-top: 40px;
     background: rgba(71, 45, 162, 1);
+    animation-name: move-menu;
+    animation-duration: 500ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-menu {
+
+    100% {
+        right: 0;
+    }
 }
 
 .header .head .menu.active .logo {
@@ -175,9 +273,19 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(71, 45, 162, 0.7);
+    animation-name: add-overlay;
+    animation-duration: 900ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
+@keyframes add-overlay {
+    100% {
+        background: rgba(71, 45, 162, 0.7);
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
 .header .head .menu.active .overlay {
     display: block;
 }
@@ -268,16 +376,46 @@ body {
         display: none;
     }
 
-    .header .head .contacts {
-        display: none;
+}
+
+@media screen and (max-width:769px) {
+    .header .wrapper {
+        padding: 20px 7px 100px 15px;
     }
 
+    .header .head {
+        margin-bottom: 100px
+    }
 
+    .header .head .burger {
+        top: 20px;
+    }
 
+    .header .content .title {
+        max-width: 560px;
+        font-weight: 600;
+        font-size: 40px;
+    }
 
+    .header .content .text {
+        font-size: 16px;
+    }
+}
 
+@media screen and (max-width:560px) {
+    .header .content .title {
+        line-height: 36px;
+        max-width: 320px;
+        font-weight: 400;
+        font-size: 32px;
+    }
 
-
+    .header .content .text {
+        font-size: 14px;
+        max-width: 320px;
+        font-weight: 300;
+        line-height: 19px;
+    }
 }
 
 /* ----------------------------------about-us-------------------------------------------- */
@@ -327,6 +465,46 @@ body {
     left: 0;
 }
 
+@media screen and (max-width:1200px) {
+    .about-us .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us .title {
+        margin-bottom: 50px;
+    }
+
+}
+
+@media screen and (max-width:940px) {
+    .about-us .wrapper {
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .about-us .title {
+        font-size: 32px;
+    }
+
+    .about-us .content .text {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:560px){
+    .about-us .wrapper {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .about-us .title{
+        font-size: 28px;
+    }
+    .about-us .text{
+        font-size: 12px;
+    }
+}
 /* ------------------------skills-developing------------------------------------ */
 .skills-developing .wrapper {
     padding-top: 104px;
@@ -405,6 +583,86 @@ body {
     color: #808080;
 }
 
+@media screen and (max-width:1000px) {
+    .skills-developing .wrapper {
+        padding-top: 92px;
+        padding-bottom: 109px;
+        padding-right: 0px;
+    }
+
+    .skills-developing .title {
+        display: none;
+    }
+
+    .skills-developing .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-developing .container .column {
+        text-align: center;
+    }
+
+
+    .skills-developing .container .column-name {
+        max-width: 370px;
+        margin-bottom: 40px;
+        padding: 0;
+        order: 1;
+    }
+
+    .skills-developing .container .column-left {
+        order: 2;
+        margin-bottom: 27px;
+    }
+
+    .skills-developing .container .column-right {
+        order: 3;
+
+    }
+
+    .skills-developing .container .column-right .item {
+        flex-direction: row-reverse;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .skills-developing .container .column-name {
+        font-size: 32px;
+    }
+
+    .skills-developing .container .column .item .content .item-title {
+        font-size: 20px;
+    }
+
+    .skills-developing .container .column .item .content .text {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:560px){
+    .skills-developing .wrapper{
+        padding:60px 10px
+    }
+    .skills-developing .container{
+        padding-left:10px;
+    }
+    .skills-developing .container .column-name{
+        font-size: 28px;
+    }
+    .skills-developing .container .column{
+        min-width: 320px;
+    }
+    .skills-developing .container .column .item {
+        column-gap: 10px;
+    }
+    
+    .skills-developing .container .column .item .content .text {
+        font-size: 12px;
+    }
+    .skills-developing .container .column .item .content .item-title {
+        font-size: 18px;
+    }
+}
 /* -----------------------------------------about-trainer------------------------------------------- */
 .about-trainer {
     background-color: #6D4CE1;
@@ -487,6 +745,59 @@ body {
     line-height: 30px;
 }
 
+@media screen and (max-width:1000px) {
+    .about-trainer .wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0px;
+    }
+
+    .about-trainer .quotes-container {
+        order: 2;
+    }
+
+    .about-trainer .information {
+        order: 1
+    }
+}
+
+@media screen and (max-width:769px) {
+    .about-trainer .information {
+        padding: 60px 80px 64px 90px;
+    }
+
+    .about-trainer .information .trainer-name {
+        font-size: 32px;
+    }
+
+    .about-trainer .information .text,
+    .about-trainer .quotes-container .item {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:560px){
+    .about-trainer .wrapper {
+        padding: 60px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-trainer .information{
+        max-width: 310px;
+    }
+    .about-trainer .information {
+        padding: 40px 88px 31px 82px;
+    }
+    .about-trainer .information .trainer-name{
+        font-size: 28px;
+        line-height: 26px;
+    }
+    .about-trainer .information .text,
+     .about-trainer .quotes-container .item{
+         font-size: 12px;
+         line-height: 18px;
+     }
+}
 /* -------------------------------course-program------------------------------------------- */
 .course-program .wrapper {
     padding-top: 119px;
@@ -606,6 +917,75 @@ body {
     justify-content: center;
 }
 
+@media screen and (max-width:769px) {
+    .course-program .wrapper {
+        padding: 80px 20px;
+    }
+
+    .course-program .title {
+        font-size: 32px;
+        max-width: 318px;
+    }
+
+    .course-program .course-duration {
+        max-width: 318px;
+    }
+
+    .course-program .course-duration .top span {
+        font-size: 14px;
+    }
+
+    .course-program .course-duration .top .hours-count {
+        font-size: 32px;
+    }
+
+    .course-program .course-duration .bottom {
+        font-size: 18px;
+    }
+
+    .course-program .purposes-box .title {
+        font-size: 20px;
+    }
+
+    .course-program .purposes-box .purposes {
+        max-width: 500px;
+    }
+
+    .course-program .purposes-box .purposes .purpose::before,
+    .course-program .purposes-box .purposes .purpose::after {
+        width: 30px;
+        height: 30px;
+        top: -30%;
+    }
+
+    .course-program .purposes-box .purposes .purpose {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:560px){
+    .course-program .wrapper {
+        padding: 60px 10px;
+    }
+    .course-program .title {
+        font-size: 28px;
+        text-align: center;
+
+    }
+    .course-program .course-duration .top span{
+        font-size: 12px;
+    }
+    .course-program .course-duration .top .hours-count {
+        font-size: 28px;
+    }
+    .course-program .purposes-box .title{
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .course-program .purposes-box .purposes .purpose::before, .course-program .purposes-box .purposes .purpose::after{
+        display: none;
+    }
+    
+}
 /*---------------------------videos-----------------------  */
 .videos {
     background-blend-mode: multiply;
@@ -656,6 +1036,12 @@ body {
 
 .videos .video .play:hover {
     background-color: rgba(223, 34, 34, 1);
+}
+
+@media screen and (max-width:560px){
+    .videos .wrapper{
+        padding:60px 10px
+    }
 }
 
 /* ----------------------cost--------------------------------------------- */
@@ -723,6 +1109,58 @@ body {
     border-radius: 50%;
 }
 
+@media screen and (max-width:1200px) {
+    .cost .wrapper {
+        justify-content: center;
+        column-gap: 40px;
+    }
+
+    .cost .figure {
+        font-size: 80px;
+    }
+
+    .cost .title {
+        font-size: 32px;
+    }
+
+    .cost .about-diskounts {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .cost .wrapper {
+        padding-left: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cost .title {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .cost .wrapper {
+        padding: 80px 0px;
+    }
+
+    .cost .title {
+        font-size: 32px;
+    }
+
+    .cost .figure {
+        font-size: 60px;
+    }
+}
+@media screen and (max-width:560px){
+    .cost .wrapper{
+        padding:60px 10px
+    }
+    .cost .title {
+        font-size: 28px;
+    }
+}
 /* -------------------recording------------------------------------------ */
 .recording {
     text-align: center;
@@ -792,6 +1230,46 @@ body {
     padding: 18px 112px;
 }
 
+@media screen and (max-width:769px) {
+    .recording .wrapper {
+        padding: 80px 20px;
+    }
+
+    .recording .title {
+        max-width: 460px;
+        font-size: 32px;
+    }
+
+    .recording .text {
+        font-size: 14px;
+    }
+
+    .recording .record-form .container input {
+        font-size: 14px;
+        padding: 6px 0px 6px 16px;
+    }
+
+    .recording .record-form .button {
+        padding: 10px 112px;
+    }
+}
+@media screen and (max-width:560px){
+    .recording .wrapper {
+        padding: 60px 10px;
+    }
+    .recording .title {
+        max-width: 320px;
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .recording .text {
+        font-size: 12px;
+    }
+    .recording .record-form .container input {
+        font-size: 12px;
+    }
+}
+
 /* ------------------------------footer------------------------------- */
 .footer {
     background: #2A2A2A;
@@ -824,4 +1302,20 @@ body {
     line-height: 20px;
     color: #9B9B9B;
     display: block;
+}
+
+@media screen and (max-width:940px) {
+    .footer .wrapper {
+        padding: 28px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .footer .information span {
+        font-size: 10px;
+    }
 }

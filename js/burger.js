@@ -5,7 +5,19 @@ const overlayBlock = document.querySelector(".header .head .menu .overlay");
 
 function toggleMenu(){
     burgerButton.classList.toggle("active");
+    if(burgerButton.classList.contains("active")){
+        burgerButton.classList.remove("close")
+    }
+    else {
+        burgerButton.classList.add("close");
+    }
     menu.classList.toggle("active");
+    if(menu.classList.contains("active")){
+        menu.classList.remove("close")
+    }
+    else {
+        menu.classList.add("close");
+    }
 }
 burgerButton.addEventListener("click",toggleMenu);
 overlayBlock.addEventListener("click",toggleMenu);
