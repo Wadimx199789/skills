@@ -13,6 +13,38 @@ body {
     font-size: 16px;
     font-weight: 400;
 }
+.back-top {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient( #dd03e4, #5611ec);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1000;
+  }
+  
+  .back-top:hover {
+    transform:scale(1.2);
+  }
+  .back-top .up{
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(45deg);
+    margin-top: 18px;
+    margin-left: 19px;
+  }
+  
+  .back-top-show {
+    display: block;
+  }
 
 .wrapper {
     width: 100%;
