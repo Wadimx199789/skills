@@ -1,4 +1,5 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
 * {
     box-sizing: border-box;
@@ -1499,6 +1500,7 @@ body {
 }
 
 .calculator-block {
+    font-family: 'Lexend Deca', sans-serif;
     transform: scale(0);
     position: fixed;
     z-index: 99999;

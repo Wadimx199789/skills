@@ -17,6 +17,8 @@ function toggleMenu(){
         menuLinks.forEach((menuLink)=>{
             menuLink.addEventListener("click",()=>{
                 menu.classList.remove("active");
+                burgerButton.classList.remove("active");
+                burgerButton.classList.add("close");
             })
         })
     }
