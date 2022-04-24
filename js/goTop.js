@@ -20,7 +20,7 @@
       }
     }
   
-    var goTopBtn = document.querySelector('.back-top');
+    let goTopBtn = document.querySelector('.back-top');
   
     window.addEventListener('scroll', trackScroll);
     goTopBtn.addEventListener('click', backToTop);

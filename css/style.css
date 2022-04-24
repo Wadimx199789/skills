@@ -1320,7 +1320,6 @@ body {
     font-size: var(--base-size);
     line-height: 26px;
     color: #808080;
-    border: 2px solid inherit;
 }
 
 .recording .record-form .container input:focus {
@@ -1591,7 +1590,7 @@ body {
 
 .calculator-block .calculator .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4fr,1);
     grid-gap: 5px;
 }
 
