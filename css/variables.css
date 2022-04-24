@@ -1,0 +1,14 @@
+:root{
+    --familie:  'Raleway', sans-serif;
+    --text-color:#fff;
+    --base-color:#6D4CE1;
+
+    --weight-light:300;
+    --weight-normal:400;
+    --weight-medium:500;
+    --weight-semi-bold:600;
+    --base-title-size:40px;
+    --tablet-title-size:32px;
+    --base-size:16px;
+    --base-line-height:30px;
+}

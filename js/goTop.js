@@ -2,8 +2,8 @@
     'use strict';
   
     function trackScroll() {
-      var scrolled = window.pageYOffset;
-      var coords = document.documentElement.clientHeight;
+      let scrolled = window.pageYOffset;
+      let coords = document.documentElement.clientHeight;
   
       if (scrolled > coords) {
         goTopBtn.classList.add('back-top-show');

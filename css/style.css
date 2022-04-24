@@ -2,16 +2,15 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Raleway';
-    font-size: 16px;
-    font-weight: 400;
     color: #FFFFFF;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-family: var(--familie);
+    font-size: var(--base-size);
+    font-weight: var(--weight-normal);
+    line-height:var(--base-line-height);
+    font-style: normal;
 }
 .back-top {
     width: 50px;
@@ -74,9 +73,9 @@ body {
     background: #472DA2;
     border: none;
     border-radius: 30px;
-    font-weight: 600;
+    font-weight: var(--weight-semi-bold);
     font-size: 22px;
-    line-height: 30px;
+    line-height:var(--base-line-height);
     text-align: center;
     color: #FFFFFF;
     transition: all 0.3s ease-in-out;
@@ -126,9 +125,12 @@ body {
 
 .header .head .burger {
     display: none;
-    width: 30px;
-    height: 22px;
+    width: 44px;
+    height: 36px;
     position: relative;
+    background: #000000;
+    border:8px solid #000000;
+    border-radius: 50%;
 }
 
 .header .head .burger span {
@@ -136,7 +138,7 @@ body {
     top: 50%;
     display: block;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: #FFFFFF;
     transform: translateY(-50%);
 
@@ -151,7 +153,7 @@ body {
     position: absolute;
     content: "";
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: #FFFFFF;
 }
 
@@ -276,7 +278,7 @@ body {
     top: 0;
     right: -200%;
     padding-top: 40px;
-    background: rgba(71, 45, 162, 1);
+    background: var(--base-color);
     animation-name: move-menu;
     animation-duration: 500ms;
     animation-timing-function: ease;
@@ -368,7 +370,7 @@ body {
 
 .header .content .title {
     max-width: 610px;
-    font-weight: 500;
+    font-weight: var(--weight-medium);
     font-size: 100px;
     line-height: 100px;
     text-align: center;
@@ -377,10 +379,8 @@ body {
 }
 
 .header .content .text {
-    font-family: 'Raleway';
-    font-style: normal;
     max-width: 546px;
-    font-weight: 300;
+    font-weight: var(--weight-light);
     font-size: 22px;
     line-height: 35px;
     text-align: center;
@@ -395,8 +395,8 @@ body {
     .header .head .burger {
         position: fixed;
         z-index: 40;
-        top: 41px;
-        right: 20px;
+        top: 25px;
+        right: 25px;
         display: block;
     }
 
@@ -425,12 +425,12 @@ body {
 
     .header .content .title {
         max-width: 560px;
-        font-weight: 600;
-        font-size: 40px;
+        font-weight: var(--weight-semi-bold);
+        font-size: var(--base-title-size);
     }
 
     .header .content .text {
-        font-size: 16px;
+        font-size: var(--base-size);
     }
 }
 
@@ -438,14 +438,14 @@ body {
     .header .content .title {
         line-height: 36px;
         max-width: 320px;
-        font-weight: 400;
+        font-weight: var(--weight-normal);
         font-size: 32px;
     }
 
     .header .content .text {
         font-size: 14px;
         max-width: 320px;
-        font-weight: 300;
+        font-weight: var(--weight-light);
         line-height: 19px;
     }
 }
@@ -464,16 +464,13 @@ body {
 }
 
 .about-us .title {
-    font-weight: 600;
-    font-size: 40px;
+    font-weight: var(--weight-semi-bold);
+    font-size:  var(--base-title-size);
     line-height: 22px;
     color: #464646;
 }
 
 .about-us .content .text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
     color: #808080;
     max-width: 890px;
 }
@@ -492,13 +489,15 @@ body {
     content: "";
     width: 3px;
     height: 100%;
-    background-color: #6D4CE1;
+    background-color: var(--base-color);
     top: 0;
     left: 0;
 }
 
 @media screen and (max-width:1200px) {
     .about-us .wrapper {
+        padding-left:20px;
+        padding-right:20px;
         flex-direction: column;
         align-items: center;
     }
@@ -518,7 +517,7 @@ body {
 
 @media screen and (max-width:769px) {
     .about-us .title {
-        font-size: 32px;
+        font-size: var(--tablet-title-size);
     }
 
     .about-us .content .text {
@@ -547,7 +546,7 @@ body {
 .skills-developing .title {
     margin: 0 auto 80px;
     max-width: 452px;
-    font-weight: 600;
+    font-weight:var(--weight-semi-bold);
     font-size: 25px;
     line-height: 22px;
     color: #464646;
@@ -575,8 +574,8 @@ body {
 
 .skills-developing .container .column-name {
     padding-top: 44px;
-    color: #6D4CE1;
-    font-weight: 600;
+    color:var(--base-color);
+    font-weight:var(--weight-semi-bold);
     font-size: 60px;
     line-height: 80px;
     max-width: 210px;
@@ -601,17 +600,15 @@ body {
 
 
 .skills-developing .container .column .item .content .item-title {
-    font-weight: 600;
+    font-weight: var(--weight-semi-bold);
     font-size: 22px;
     line-height: 23px;
     color: #464646;
 }
 
 .skills-developing .container .column .item .content .text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
+    font-weight:var(--weight-normal);
+    font-size: var(--base-size);
     color: #808080;
 }
 
@@ -660,7 +657,7 @@ body {
 
 @media screen and (max-width:769px) {
     .skills-developing .container .column-name {
-        font-size: 32px;
+        font-size:  var(--tablet-title-size);
     }
 
     .skills-developing .container .column .item .content .item-title {
@@ -685,6 +682,8 @@ body {
         min-width: 320px;
     }
     .skills-developing .container .column .item {
+        display: flex;
+        justify-content: space-between;
         column-gap: 10px;
     }
     
@@ -697,7 +696,7 @@ body {
 }
 /* -----------------------------------------about-trainer------------------------------------------- */
 .about-trainer {
-    background-color: #6D4CE1;
+    background-color: var(--base-color);
 }
 
 .about-trainer .wrapper {
@@ -714,9 +713,7 @@ body {
 .about-trainer .quotes-container .item {
     position: relative;
     padding-left: 53px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
+    font-weight: var(--weight-normal);
 }
 
 .about-trainer .quotes-container .item::before {
@@ -762,8 +759,7 @@ body {
 
 .about-trainer .information .trainer-name {
     max-width: 230px;
-    font-style: normal;
-    font-weight: 600;
+    font-weight:var(--weight-semi-bold);
     font-size: 46px;
     line-height: 49px;
     margin-bottom: 20px;
@@ -772,11 +768,14 @@ body {
 
 .about-trainer .information .text {
     max-width: 230px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
+    font-weight: var(--weight-normal);
 }
-
+@media screen and (max-width:1200px){
+    .about-trainer .wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
 @media screen and (max-width:1000px) {
     .about-trainer .wrapper {
         flex-direction: column;
@@ -799,7 +798,7 @@ body {
     }
 
     .about-trainer .information .trainer-name {
-        font-size: 32px;
+        font-size:var(--tablet-title-size);
     }
 
     .about-trainer .information .text,
@@ -838,8 +837,7 @@ body {
 }
 
 .course-program .title {
-    font-style: normal;
-    font-weight: 600;
+    font-weight: var(--weight-semi-bold);
     font-size: 25px;
     line-height: 44px;
     color: #464646;
@@ -859,7 +857,7 @@ body {
 .course-program .course-duration {
     margin: 0 auto;
     text-align: center;
-    border: 2px solid #6D4CE1;
+    border: 2px solid var(--base-color);
     max-width: 350px;
     margin-bottom: 60px;
 }
@@ -871,32 +869,31 @@ body {
 
 .course-program .course-duration .top span {
     display: block;
-    font-weight: 600;
+    font-weight: var(--weight-semi-bold);
     font-size: 22px;
     line-height: 23px;
-    color: #6D4CE1;
+    color: var(--base-color);
 }
 
 .course-program .course-duration .top .hours-count {
-    font-weight: 600;
+    font-weight: var(--weight-semi-bold);
     font-size: 53px;
     line-height: 55px;
-    color: #6D4CE1;
+    color: var(--base-color);
 }
 
 .course-program .course-duration .bottom {
     padding: 15px 48px 27px;
-    background-color: #6D4CE1;
-    font-weight: 600;
+    background-color: var(--base-color);
+    font-weight: var(--weight-semi-bold);
     font-size: 22px;
-    line-height: 30px;
     color: #C8B8FF;
 }
 
 .course-program .purposes-box {
     padding-top: 61px;
     padding-bottom: 86px;
-    border: 2px solid #6D4CE1;
+    border: 2px solid var(--base-color);
     margin: 0 auto 74px;
     text-align: center;
     max-width: 920px;
@@ -916,7 +913,7 @@ body {
 
 .course-program .purposes-box .purposes .purpose {
     position: relative;
-    font-weight: 600;
+    font-weight: var(--weight-semi-bold);
     font-size: 22px;
     line-height: 23px;
     color: #464646;
@@ -930,7 +927,7 @@ body {
     width: 41px;
     top: -50%;
     height: 41px;
-    border: 1px solid #6D4CE1;
+    border: 1px solid var(--base-color);
     border-radius: 50%;
     background: url("../assets/checked.svg") no-repeat center;
 }
@@ -955,7 +952,7 @@ body {
     }
 
     .course-program .title {
-        font-size: 32px;
+        font-size:  var(--tablet-title-size);
         max-width: 318px;
     }
 
@@ -1090,14 +1087,14 @@ body {
 
 .cost .title {
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: 40px;
+    font-weight:var(--weight-semi-bold);
+    font-size:  var(--base-title-size);
     line-height: 64px;
     color: #FFFFFF;
 }
 
 .cost .figure {
-    font-weight: 600;
+    font-weight: var(--weight-semi-bold);
     font-size: 100px;
     line-height: 160px;
     color: #FFFFFF;
@@ -1107,7 +1104,7 @@ body {
 .cost .about-diskounts {
     position: relative;
     max-width: 315px;
-    font-weight: 400;
+    font-weight: var(--weight-normal);
     font-size: 16px;
     line-height: 25px;
     color: #C8B8FF;
@@ -1178,7 +1175,7 @@ body {
     }
 
     .cost .title {
-        font-size: 32px;
+        font-size:  var(--tablet-title-size);
     }
 
     .cost .figure {
@@ -1211,8 +1208,8 @@ body {
 
 .recording .title {
     max-width: 575px;
-    font-weight: 600;
-    font-size: 40px;
+    font-weight: var(--weight-semi-bold);
+    font-size:  var(--base-title-size);
     line-height: 55px;
     text-align: center;
     color: #464646;
@@ -1222,8 +1219,7 @@ body {
 
 .recording .text {
     margin: 0 auto;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight:var(--weight-normal);
     line-height: 30px;
     text-align: center;
     color: #808080;
@@ -1247,15 +1243,15 @@ body {
 
 .recording .record-form .container input {
     padding: 15px 0px 15px 27px;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: var(--weight-normal);
+    font-size: var(--base-size);
     line-height: 26px;
     color: #808080;
     border: 2px solid inherit;
 }
 
 .recording .record-form .container input:focus {
-    border: 2px solid #6D4CE1;
+    border: 2px solid var(--base-color);
 }
 
 .recording .record-form .button {
@@ -1269,7 +1265,7 @@ body {
 
     .recording .title {
         max-width: 460px;
-        font-size: 32px;
+        font-size:  var(--tablet-title-size);
     }
 
     .recording .text {
@@ -1315,12 +1311,12 @@ body {
 }
 
 .footer .contacts a {
-    border: 1px solid #6D4CE1;
+    border: 1px solid var(--base-color);
 
 }
 
 .footer .contacts a i {
-    color: #6D4CE1;
+    color: var(--base-color);
 }
 
 .footer .information {
@@ -1329,7 +1325,7 @@ body {
 }
 
 .footer .information span {
-    font-weight: 400;
+    font-weight: var(--weight-normal);
     font-size: 12px;
     line-height: 20px;
     color: #9B9B9B;
@@ -1346,7 +1342,7 @@ body {
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:769px) {
     .footer .information span {
         font-size: 10px;
     }
