@@ -4,6 +4,7 @@ const menuLinks = document.querySelectorAll(".header .head .menu ul li a");
 const overlayBlock = document.querySelector(".header .head .menu .overlay");
 
 function toggleMenu(){
+
     burgerButton.classList.toggle("active");
     if(burgerButton.classList.contains("active")){
         burgerButton.classList.remove("close")
@@ -12,15 +13,14 @@ function toggleMenu(){
         burgerButton.classList.add("close");
     }
     menu.classList.toggle("active");
-    if(menu.classList.contains("active")){
-        menu.classList.remove("close")
-    }
-    else {
-        menu.classList.add("close");
+    if(burgerButton.classList.contains("active")){
+        menuLinks.forEach((menuLink)=>{
+            menuLink.addEventListener("click",()=>{
+                menu.classList.remove("active");
+            })
+        })
     }
 }
 burgerButton.addEventListener("click",toggleMenu);
 overlayBlock.addEventListener("click",toggleMenu);
-menuLinks.forEach((menuLink)=>{
-    menuLink.addEventListener("click",toggleMenu);
-})
+
