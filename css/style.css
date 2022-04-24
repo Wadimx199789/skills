@@ -9,13 +9,14 @@ body {
     font-family: var(--familie);
     font-size: var(--base-size);
     font-weight: var(--weight-normal);
-    line-height:var(--base-line-height);
+    line-height: var(--base-line-height);
     font-style: normal;
 }
+
 .back-top {
     width: 50px;
     height: 50px;
-    background: radial-gradient( #dd03e4, #5611ec);
+    background: radial-gradient(#dd03e4, #5611ec);
     border-radius: 50%;
     position: fixed;
     bottom: 50px;
@@ -26,12 +27,13 @@ body {
     cursor: pointer;
     transition: 0.5s;
     z-index: 1000;
-  }
-  
-  .back-top:hover {
-    transform:scale(1.2);
-  }
-  .back-top .up{
+}
+
+.back-top:hover {
+    transform: scale(1.2);
+}
+
+.back-top .up {
     width: 15px;
     height: 15px;
     border-top: 2px solid #fff;
@@ -39,11 +41,11 @@ body {
     transform: rotate(45deg);
     margin-top: 18px;
     margin-left: 19px;
-  }
-  
-  .back-top-show {
+}
+
+.back-top-show {
     display: block;
-  }
+}
 
 .wrapper {
     width: 100%;
@@ -75,7 +77,7 @@ body {
     border-radius: 30px;
     font-weight: var(--weight-semi-bold);
     font-size: 22px;
-    line-height:var(--base-line-height);
+    line-height: var(--base-line-height);
     text-align: center;
     color: #FFFFFF;
     transition: all 0.3s ease-in-out;
@@ -129,7 +131,7 @@ body {
     height: 36px;
     position: relative;
     background: #000000;
-    border:8px solid #000000;
+    border: 8px solid #000000;
     border-radius: 50%;
 }
 
@@ -465,7 +467,7 @@ body {
 
 .about-us .title {
     font-weight: var(--weight-semi-bold);
-    font-size:  var(--base-title-size);
+    font-size: var(--base-title-size);
     line-height: 22px;
     color: #464646;
 }
@@ -496,8 +498,8 @@ body {
 
 @media screen and (max-width:1200px) {
     .about-us .wrapper {
-        padding-left:20px;
-        padding-right:20px;
+        padding-left: 20px;
+        padding-right: 20px;
         flex-direction: column;
         align-items: center;
     }
@@ -524,18 +526,22 @@ body {
         font-size: 14px;
     }
 }
-@media screen and (max-width:560px){
+
+@media screen and (max-width:560px) {
     .about-us .wrapper {
         padding-top: 60px;
         padding-bottom: 60px;
     }
-    .about-us .title{
+
+    .about-us .title {
         font-size: 28px;
     }
-    .about-us .text{
+
+    .about-us .text {
         font-size: 12px;
     }
 }
+
 /* ------------------------skills-developing------------------------------------ */
 .skills-developing .wrapper {
     padding-top: 104px;
@@ -546,7 +552,7 @@ body {
 .skills-developing .title {
     margin: 0 auto 80px;
     max-width: 452px;
-    font-weight:var(--weight-semi-bold);
+    font-weight: var(--weight-semi-bold);
     font-size: 25px;
     line-height: 22px;
     color: #464646;
@@ -574,8 +580,8 @@ body {
 
 .skills-developing .container .column-name {
     padding-top: 44px;
-    color:var(--base-color);
-    font-weight:var(--weight-semi-bold);
+    color: var(--base-color);
+    font-weight: var(--weight-semi-bold);
     font-size: 60px;
     line-height: 80px;
     max-width: 210px;
@@ -607,7 +613,7 @@ body {
 }
 
 .skills-developing .container .column .item .content .text {
-    font-weight:var(--weight-normal);
+    font-weight: var(--weight-normal);
     font-size: var(--base-size);
     color: #808080;
 }
@@ -657,7 +663,7 @@ body {
 
 @media screen and (max-width:769px) {
     .skills-developing .container .column-name {
-        font-size:  var(--tablet-title-size);
+        font-size: var(--tablet-title-size);
     }
 
     .skills-developing .container .column .item .content .item-title {
@@ -668,32 +674,39 @@ body {
         font-size: 14px;
     }
 }
-@media screen and (max-width:560px){
-    .skills-developing .wrapper{
-        padding:60px 10px
+
+@media screen and (max-width:560px) {
+    .skills-developing .wrapper {
+        padding: 60px 10px
     }
-    .skills-developing .container{
-        padding-left:10px;
+
+    .skills-developing .container {
+        padding-left: 10px;
     }
-    .skills-developing .container .column-name{
+
+    .skills-developing .container .column-name {
         font-size: 28px;
     }
-    .skills-developing .container .column{
+
+    .skills-developing .container .column {
         min-width: 320px;
     }
+
     .skills-developing .container .column .item {
         display: flex;
         justify-content: space-between;
         column-gap: 10px;
     }
-    
+
     .skills-developing .container .column .item .content .text {
         font-size: 12px;
     }
+
     .skills-developing .container .column .item .content .item-title {
         font-size: 18px;
     }
 }
+
 /* -----------------------------------------about-trainer------------------------------------------- */
 .about-trainer {
     background-color: var(--base-color);
@@ -759,7 +772,7 @@ body {
 
 .about-trainer .information .trainer-name {
     max-width: 230px;
-    font-weight:var(--weight-semi-bold);
+    font-weight: var(--weight-semi-bold);
     font-size: 46px;
     line-height: 49px;
     margin-bottom: 20px;
@@ -770,12 +783,14 @@ body {
     max-width: 230px;
     font-weight: var(--weight-normal);
 }
-@media screen and (max-width:1200px){
+
+@media screen and (max-width:1200px) {
     .about-trainer .wrapper {
         padding-left: 20px;
         padding-right: 20px;
     }
 }
+
 @media screen and (max-width:1000px) {
     .about-trainer .wrapper {
         flex-direction: column;
@@ -798,7 +813,7 @@ body {
     }
 
     .about-trainer .information .trainer-name {
-        font-size:var(--tablet-title-size);
+        font-size: var(--tablet-title-size);
     }
 
     .about-trainer .information .text,
@@ -806,29 +821,35 @@ body {
         font-size: 14px;
     }
 }
-@media screen and (max-width:560px){
+
+@media screen and (max-width:560px) {
     .about-trainer .wrapper {
         padding: 60px 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .about-trainer .information{
+
+    .about-trainer .information {
         max-width: 310px;
     }
+
     .about-trainer .information {
         padding: 40px 88px 31px 82px;
     }
-    .about-trainer .information .trainer-name{
+
+    .about-trainer .information .trainer-name {
         font-size: 28px;
         line-height: 26px;
     }
+
     .about-trainer .information .text,
-     .about-trainer .quotes-container .item{
-         font-size: 12px;
-         line-height: 18px;
-     }
+    .about-trainer .quotes-container .item {
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
+
 /* -------------------------------course-program------------------------------------------- */
 .course-program .wrapper {
     padding-top: 119px;
@@ -952,7 +973,7 @@ body {
     }
 
     .course-program .title {
-        font-size:  var(--tablet-title-size);
+        font-size: var(--tablet-title-size);
         max-width: 318px;
     }
 
@@ -991,30 +1012,38 @@ body {
         font-size: 14px;
     }
 }
-@media screen and (max-width:560px){
+
+@media screen and (max-width:560px) {
     .course-program .wrapper {
         padding: 60px 10px;
     }
+
     .course-program .title {
         font-size: 28px;
         text-align: center;
 
     }
-    .course-program .course-duration .top span{
+
+    .course-program .course-duration .top span {
         font-size: 12px;
     }
+
     .course-program .course-duration .top .hours-count {
         font-size: 28px;
     }
-    .course-program .purposes-box .title{
+
+    .course-program .purposes-box .title {
         font-size: 22px;
         line-height: 26px;
     }
-    .course-program .purposes-box .purposes .purpose::before, .course-program .purposes-box .purposes .purpose::after{
+
+    .course-program .purposes-box .purposes .purpose::before,
+    .course-program .purposes-box .purposes .purpose::after {
         display: none;
     }
-    
+
 }
+
 /*---------------------------videos-----------------------  */
 .videos {
     background-blend-mode: multiply;
@@ -1067,9 +1096,9 @@ body {
     background-color: rgba(223, 34, 34, 1);
 }
 
-@media screen and (max-width:560px){
-    .videos .wrapper{
-        padding:60px 10px
+@media screen and (max-width:560px) {
+    .videos .wrapper {
+        padding: 60px 10px
     }
 }
 
@@ -1087,8 +1116,8 @@ body {
 
 .cost .title {
     text-transform: uppercase;
-    font-weight:var(--weight-semi-bold);
-    font-size:  var(--base-title-size);
+    font-weight: var(--weight-semi-bold);
+    font-size: var(--base-title-size);
     line-height: 64px;
     color: #FFFFFF;
 }
@@ -1175,21 +1204,24 @@ body {
     }
 
     .cost .title {
-        font-size:  var(--tablet-title-size);
+        font-size: var(--tablet-title-size);
     }
 
     .cost .figure {
         font-size: 60px;
     }
 }
-@media screen and (max-width:560px){
-    .cost .wrapper{
-        padding:60px 10px
+
+@media screen and (max-width:560px) {
+    .cost .wrapper {
+        padding: 60px 10px
     }
+
     .cost .title {
         font-size: 28px;
     }
 }
+
 /* -------------------recording------------------------------------------ */
 .recording {
     text-align: center;
@@ -1209,7 +1241,7 @@ body {
 .recording .title {
     max-width: 575px;
     font-weight: var(--weight-semi-bold);
-    font-size:  var(--base-title-size);
+    font-size: var(--base-title-size);
     line-height: 55px;
     text-align: center;
     color: #464646;
@@ -1219,7 +1251,7 @@ body {
 
 .recording .text {
     margin: 0 auto;
-    font-weight:var(--weight-normal);
+    font-weight: var(--weight-normal);
     line-height: 30px;
     text-align: center;
     color: #808080;
@@ -1265,7 +1297,7 @@ body {
 
     .recording .title {
         max-width: 460px;
-        font-size:  var(--tablet-title-size);
+        font-size: var(--tablet-title-size);
     }
 
     .recording .text {
@@ -1281,23 +1313,93 @@ body {
         padding: 10px 112px;
     }
 }
-@media screen and (max-width:560px){
+
+@media screen and (max-width:560px) {
     .recording .wrapper {
         padding: 60px 10px;
     }
+
     .recording .title {
         max-width: 320px;
         font-size: 28px;
         line-height: 28px;
     }
+
     .recording .text {
         font-size: 12px;
     }
+
     .recording .record-form .container input {
         font-size: 12px;
     }
 }
 
+/* ------------------------------map-------------------------------------------------- */
+.map {
+    position: relative;
+    height: 616px;
+}
+
+.map-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.map .content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2)
+}
+
+.map .wrapper {
+    padding-left: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.map .contacts-information {
+    background: var(--base-color);
+    padding: 55px 122px 76px 55px;
+}
+
+.map .contacts-information .title {
+    font-weight: var(--weight-semi-bold);
+    font-size: 25px;
+    line-height: 44px;
+}
+
+.map .contacts-information .data {
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width:769px) {
+    .map {
+        height: 500px;
+    }
+
+    .map .contacts-information {
+        padding: 5px 20px 20px 20px;
+    }
+}
+@media screen and (max-width:560px) {
+    .map {
+        height: 500px;
+    }
+    .map .contacts-information .data {
+        margin-bottom: 10px;
+    }
+    .map .contacts-information {
+        padding: 5px 20px 20px 20px;
+    }
+}
 /* ------------------------------footer------------------------------- */
 .footer {
     background: #2A2A2A;
