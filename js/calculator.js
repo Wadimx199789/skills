@@ -100,7 +100,9 @@ buttons.addEventListener('click', e => {
 });
 openCalculator.addEventListener("click",()=>{
     calculator.classList.add("active");
+    openCalculator.classList.add("inactive")
 });
 closeCalculator.addEventListener("click",()=>{
     calculator.classList.remove("active");
+    openCalculator.classList.remove("inactive")
 })
