@@ -1603,7 +1603,7 @@ body {
 }
 
 @media (max-width:560px){
-    .header{
+    .calculator .head{
         max-width: 30px;
     }
 }
